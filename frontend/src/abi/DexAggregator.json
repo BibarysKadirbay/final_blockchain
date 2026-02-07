@@ -1,0 +1,345 @@
+[{
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "owner",
+            "type": "address"
+        }
+    ],
+    "name": "OwnableInvalidOwner",
+    "type": "error"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "account",
+            "type": "address"
+        }
+    ],
+    "name": "OwnableUnauthorizedAccount",
+    "type": "error"
+},
+{
+    "anonymous": false,
+    "inputs": [
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "previousOwner",
+            "type": "address"
+        },
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+        }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+},
+{
+    "anonymous": false,
+    "inputs": [
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+        },
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+        },
+        {
+            "indexed": false,
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+        }
+    ],
+    "name": "PoolRegistered",
+    "type": "event"
+},
+{
+    "anonymous": false,
+    "inputs": [
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "user",
+            "type": "address"
+        },
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "tokenIn",
+            "type": "address"
+        },
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "tokenOut",
+            "type": "address"
+        },
+        {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+        },
+        {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "amountOut",
+            "type": "uint256"
+        },
+        {
+            "indexed": false,
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+        },
+        {
+            "indexed": false,
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+        }
+    ],
+    "name": "RoutedSwap",
+    "type": "event"
+},
+{
+    "anonymous": false,
+    "inputs": [
+        {
+            "indexed": true,
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+        }
+    ],
+    "name": "TokenRegistered",
+    "type": "event"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "name": "isToken",
+    "outputs": [
+        {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        },
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "name": "poolOf",
+    "outputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "tokenIn",
+            "type": "address"
+        },
+        {
+            "internalType": "address",
+            "name": "tokenOut",
+            "type": "address"
+        },
+        {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+        }
+    ],
+    "name": "quoteBest",
+    "outputs": [
+        {
+            "internalType": "address[]",
+            "name": "bestPath",
+            "type": "address[]"
+        },
+        {
+            "internalType": "uint256",
+            "name": "bestOut",
+            "type": "uint256"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "tokenA",
+            "type": "address"
+        },
+        {
+            "internalType": "address",
+            "name": "tokenB",
+            "type": "address"
+        },
+        {
+            "internalType": "address",
+            "name": "pool",
+            "type": "address"
+        }
+    ],
+    "name": "registerPool",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+        }
+    ],
+    "name": "registerToken",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "uint256",
+            "name": "amountIn",
+            "type": "uint256"
+        },
+        {
+            "internalType": "uint256",
+            "name": "minOut",
+            "type": "uint256"
+        },
+        {
+            "internalType": "address[]",
+            "name": "path",
+            "type": "address[]"
+        },
+        {
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+        }
+    ],
+    "name": "swapExactTokensForTokens",
+    "outputs": [
+        {
+            "internalType": "uint256",
+            "name": "amountOutFinal",
+            "type": "uint256"
+        }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }
+    ],
+    "name": "tokens",
+    "outputs": [
+        {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [],
+    "name": "tokensCount",
+    "outputs": [
+        {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+        }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+},
+{
+    "inputs": [
+        {
+            "internalType": "address",
+            "name": "newOwner",
+            "type": "address"
+        }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+}]
