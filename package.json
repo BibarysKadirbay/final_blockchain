@@ -1,0 +1,25 @@
+{
+  "name": "final_blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BibarysKadirbay/final_blockchain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BibarysKadirbay/final_blockchain/issues"
+  },
+  "homepage": "https://github.com/BibarysKadirbay/final_blockchain#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "hardhat": "^3.1.7"
+  }
+}
